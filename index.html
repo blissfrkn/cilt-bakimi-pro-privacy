@@ -17,13 +17,13 @@
     h1 { font-size: 1.6rem; margin: 0 0 4px; }
     .date { color: var(--muted); font-size: .9rem; }
     h2 { font-size: 1.15rem; margin: 28px 0 8px; color: #8a4d6d; }
-    p, li { font-size: 1rem; }
-    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .95rem; }
-    th, td { text-align: left; padding: 8px 10px; border: 1px solid #eadfe5; vertical-align: top; }
-    th { background: #fbeef4; }
-    code { background: #f3e8ee; padding: 2px 6px; border-radius: 4px; font-size: .9em; }
+    p, li, td, th { font-size: 1rem; }
     .note { background: var(--card); border: 1px solid #eadfe5; border-left: 4px solid var(--pink);
             padding: 12px 16px; border-radius: 8px; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eadfe5; vertical-align: top; }
+    th { color: #8a4d6d; font-size: .9rem; }
+    .tablewrap { overflow-x: auto; }
     footer { margin-top: 40px; color: var(--muted); font-size: .85rem; }
     a { color: #b85c8a; }
   </style>
@@ -32,78 +32,130 @@
   <div class="wrap">
     <header>
       <h1>Gizlilik Politikası — Cilt Bakımı Pro</h1>
-      <div class="date">Son güncelleme: 11 Haziran 2026</div>
+      <div class="date">Son güncelleme: 5 Temmuz 2026 · Sürüm 2.0</div>
     </header>
 
-    <p>Bu gizlilik politikası, <strong>Cilt Bakımı Pro</strong> mobil uygulamasının ("Uygulama")
-    kullanıcı verilerini nasıl topladığını, kullandığını ve koruduğunu açıklar. Uygulamayı
-    kullanarak bu politikayı kabul etmiş olursunuz.</p>
+    <p>Bu Gizlilik Politikası, <strong>Cilt Bakımı Pro</strong> mobil uygulamasının ("Uygulama")
+    kişisel verilerinizi hangi amaçlarla ve nasıl işlediğini, kimlerle paylaştığını ve
+    haklarınızı açıklar. Uygulama, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve
+    Avrupa Genel Veri Koruma Tüzüğü (GDPR) ilkeleri gözetilerek geliştirilmiştir.</p>
 
-    <h2>1. Topladığımız Veriler</h2>
-    <p><strong>Hesap bilgileri:</strong> E-posta ve şifre (e-posta ile kayıt) veya Google
-    hesabınızdan gelen e-posta ve ad bilgisi (Google ile giriş).</p>
-    <p><strong>Profil ve cilt bakımı bilgileri:</strong> Cilt tipi, cinsiyet, doğum yılı, cilt
-    sorunları, günlük su hedefi; rutinleriniz, tamamlama/su/yüz yıkama kayıtları; oyunlaştırma
-    verileri (XP, seri, rozetler).</p>
-    <p><strong>Fotoğraflar:</strong> İlerleme fotoğraflarınız hesabınıza özel (private) bulut
-    depolamada saklanır; yalnızca siz erişebilirsiniz. Cilt analizi selfie'leri
-    <strong>cihazınızda işlenir, sunucularımıza yüklenmez ve saklanmaz</strong> — yalnızca skorlar kaydedilir.</p>
-    <p><strong>Yapay zeka etkileşimleri:</strong> AI Cilt Koçu'na yazdığınız mesajlar ve
-    kişiselleştirme bağlamı (cilt tipi, sorunlar, yaş, rutinler) yapay zeka sağlayıcısına iletilir.</p>
+    <div class="note"><strong>Özet:</strong> Verilerinizi satmayız ve kiralamayız; reklam ağı
+    veya üçüncü taraf takip/analitik SDK'sı kullanmayız. Verileriniz yalnızca uygulamanın
+    işlevlerini sunmak için işlenir.</div>
 
-    <h2>2. Verileri Nasıl Kullanıyoruz</h2>
-    <p>Hesabınızı yönetmek, kişiselleştirilmiş rutin/ürün önerileri sunmak, cilt bakım takibinizi
-    sağlamak, yapay zeka ile içerik analizi ve öneri üretmek ve uygulamayı iyileştirmek için.
-    Verilerinizi <strong>reklam amacıyla satmıyor veya kiralamıyoruz</strong>; üçüncü taraf
-    reklam/analitik/takip SDK'sı kullanmıyoruz.</p>
+    <h2>1. Veri Sorumlusu</h2>
+    <p>Uygulamanın geliştiricisi ve veri sorumlusu <strong>Cilt Bakımı Pro</strong> geliştirici
+    ekibidir. İletişim: <a href="mailto:ciltbakimipro@gmail.com">ciltbakimipro@gmail.com</a></p>
 
-    <h2>3. Üçüncü Taraf Hizmetler</h2>
-    <table>
-      <tr><th>Hizmet</th><th>Amaç</th><th>Paylaşılan veri</th></tr>
-      <tr><td>Supabase</td><td>Barındırma, kimlik doğrulama, veritabanı, depolama</td><td>Hesap/profil verileri, kayıtlar, ilerleme fotoğrafları</td></tr>
-      <tr><td>Google Sign-In</td><td>Google ile giriş</td><td>E-posta, ad, profil tanımlayıcısı</td></tr>
-      <tr><td>Groq (yapay zeka)</td><td>AI Koç, ürün açıklaması/öneri</td><td>Mesajlar + cilt profili bağlamı</td></tr>
-      <tr><td>Open Beauty Facts</td><td>Ürün kataloğu verisi</td><td>Yalnızca ürün/barkod sorgusu (kişisel veri yok)</td></tr>
-    </table>
-    <p>Bu hizmetlerin kendi gizlilik politikaları geçerlidir. Yapay zeka sağlayıcısına gönderilen
-    veriler yurt dışındaki sunucularda işlenebilir.</p>
+    <h2>2. Topladığımız Veriler</h2>
+    <p><strong>Hesap bilgileri:</strong> E-posta ve şifre (şifreniz kimlik doğrulama
+    sağlayıcısında güvenle saklanır, tarafımızca görüntülenemez) veya Google ile girişte
+    ad, e-posta ve profil tanımlayıcısı.</p>
+    <p><strong>Cilt profili ve kullanım kayıtları:</strong> Cilt tipi, cinsiyet, doğum yılı,
+    cilt sorunları, su hedefi; rutinler ve tamamlama kayıtları, su tüketimi, oyunlaştırma
+    verileri (XP, seri, rozet), ürün listeleriniz ve yorumlarınız.</p>
+    <p><strong>Cilt Koçu mesajları:</strong> Sohbet mesajlarınız ve üretilen yanıtlar.</p>
+    <p><strong>Abonelik durumu:</strong> Premium aboneliğin etkinlik durumu ve mağaza satın
+    alma tanımlayıcıları. <strong>Ödeme kartı bilgileriniz bize hiçbir zaman ulaşmaz</strong>;
+    ödemeler App Store / Google Play üzerinden gerçekleşir.</p>
+    <p><strong>Bildirim adresi:</strong> Anlık bildirim (push) jetonu ve bildirim tercihleri.</p>
+    <p><strong>Yaklaşık konum:</strong> Yalnızca UV endeksi / hava kartı için ve yalnızca izin
+    verirseniz; hesabınızla ilişkilendirilmez ve kaydedilmez.</p>
+    <p>Uygulama; rehberinizi, arama geçmişinizi, reklam kimliğinizi veya cihazınızdaki diğer
+    uygulamalara ait hiçbir veriyi toplamaz.</p>
 
-    <h2>4. Kamera ve Galeri İzinleri</h2>
-    <p><strong>Kamera:</strong> Cilt analizi selfie'si ve ürün barkodu taraması için.
-    <strong>Galeri/Fotoğraflar:</strong> Fotoğraf seçmek ve ilerleme fotoğraflarını kaydetmek için.
-    İzinler yalnızca ilgili özelliği kullandığınızda istenir; cihaz ayarlarından geri alabilirsiniz.</p>
+    <h2>3. Fotoğraflarınız Nasıl İşlenir?</h2>
+    <p><strong>Cilt analizi (ölçüm):</strong> Analiz fotoğrafınız <strong>cihazınızda</strong>
+    işlenir; ölçüm için sunucuya yüklenmez ve saklanmaz. Hesabınıza yalnızca hesaplanan skorlar
+    kaydedilir.</p>
+    <p><strong>Görsel Değerlendirme (Premium):</strong> Bu özelliği kullandığınız anda,
+    fotoğrafınızın küçültülmüş bir kopyası (~512 piksel) değerlendirme metni üretilmesi için
+    yapay zeka altyapımıza <strong>şifreli bağlantıyla</strong> iletilir. Fotoğraf, yanıt
+    üretildikten sonra <strong>tarafımızca saklanmaz</strong>; hesabınıza yalnızca üretilen
+    metin kaydedilir.</p>
+    <p><strong>İlerleme fotoğrafları (Cilt Günlüğü):</strong> İsteğe bağlı çektiğiniz
+    fotoğraflar hesabınıza özel (private) bulut depolama alanında saklanır; erişim yalnızca
+    size aittir ve istediğiniz zaman silebilirsiniz.</p>
 
-    <h2>5. Veri Saklama ve Güvenlik</h2>
-    <p>Verileriniz satır düzeyi güvenlik (RLS) politikalarıyla saklanır; her kullanıcı yalnızca
-    kendi verisine erişir. İlerleme fotoğraflarınız özel depolamada tutulur. Veriler aktarımda
-    şifreli bağlantı (HTTPS) ile iletilir.</p>
+    <h2>4. Verileri Hangi Amaçlarla Kullanıyoruz?</h2>
+    <p>Hesabınızı yönetmek; kişiselleştirilmiş rutin ve ürün önerileri sunmak; cilt bakım
+    takibinizi yürütmek; Cilt Koçu yanıtları ve içerik değerlendirmeleri üretmek; Premium
+    abonelik durumunu doğrulamak; izin verdiyseniz hatırlatma ve fiyat/fırsat bildirimleri
+    göndermek. <strong>Yasal dayanaklar (KVKK m.5 / GDPR m.6):</strong> sözleşmenin ifası,
+    açık rıza (fotoğraf, konum, bildirim) ve meşru menfaat (hizmet güvenliği).</p>
 
-    <h2>6. Saklama Süresi ve Haklarınız</h2>
-    <p>Verileriniz hesabınız aktif olduğu sürece saklanır. <strong>Hesabınızı ve verilerinizi
-    silme</strong>, verilerinize <strong>erişme ve düzeltme</strong> hakkına sahipsiniz. Talepler
-    için aşağıdaki adresten bize ulaşın.</p>
+    <h2>5. Üçüncü Taraf Hizmet Sağlayıcılar</h2>
+    <div class="tablewrap">
+      <table>
+        <tr><th>Hizmet</th><th>Amaç</th><th>İşlenen veri</th></tr>
+        <tr><td><strong>Supabase</strong></td><td>Kimlik doğrulama, veritabanı, depolama</td>
+            <td>Hesap, profil, kayıtlar, ilerleme fotoğrafları</td></tr>
+        <tr><td><strong>Google Sign-In</strong></td><td>Google ile giriş (isteğe bağlı)</td>
+            <td>Ad, e-posta, profil tanımlayıcısı</td></tr>
+        <tr><td><strong>Groq</strong> (yapay zeka)</td><td>Cilt Koçu, ürün açıklamaları, Görsel Değerlendirme</td>
+            <td>Mesajlar, cilt profili bağlamı; yalnızca Görsel Değerlendirmede küçültülmüş fotoğraf</td></tr>
+        <tr><td><strong>RevenueCat</strong></td><td>Abonelik doğrulama</td>
+            <td>Satın alma tanımlayıcıları, abonelik durumu</td></tr>
+        <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Anlık bildirimler</td>
+            <td>Bildirim jetonu</td></tr>
+        <tr><td><strong>Open-Meteo</strong></td><td>UV endeksi / hava bilgisi</td>
+            <td>Yaklaşık koordinat (kaydedilmez)</td></tr>
+        <tr><td><strong>Open Beauty Facts</strong></td><td>Ürün/barkod sorgusu</td>
+            <td>Yalnızca barkod numarası</td></tr>
+      </table>
+    </div>
+    <p>Bu sağlayıcıların sunucuları yurt dışında bulunabilir; tüm veri iletimi şifreli
+    bağlantı (TLS) ile yapılır. Yapay zeka erişimi, API anahtarları uygulamaya gömülmeden
+    sunucularımız üzerinden yönetilir.</p>
 
-    <h2>7. Çocukların Gizliliği</h2>
-    <p>Uygulama 13 yaş altı çocuklara yönelik değildir ve bilerek bu yaşın altından veri toplamayız.</p>
+    <h2>6. Kamera, Galeri ve Konum İzinleri</h2>
+    <p><strong>Kamera:</strong> cilt analizi fotoğrafı ve barkod taraması.
+    <strong>Galeri:</strong> ilerleme fotoğrafı seçme/kaydetme.
+    <strong>Konum (yaklaşık):</strong> yalnızca UV endeksi kartı. İzinler yalnızca ilgili
+    özelliği kullandığınızda istenir ve cihaz ayarlarından geri alınabilir; izin vermemeniz
+    uygulamanın diğer bölümlerini etkilemez.</p>
 
-    <h2>8. Yapay Zeka ve Tıbbi Uyarı</h2>
-    <p>Cilt analizi, içerik değerlendirmeleri ve yapay zeka önerileri <strong>yalnızca bilgilendirme
-    amaçlıdır ve tıbbi teşhis/tedavi yerine geçmez.</strong> Ciddi cilt sorunlarında dermatoloğa başvurun.</p>
+    <h2>7. Saklama Süreleri</h2>
+    <p>Verileriniz hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde profil,
+    kayıt, fotoğraf ve sohbet verileriniz <strong>kalıcı olarak</strong> silinir; yedeklerdeki
+    kopyalar en geç 30 gün içinde temizlenir.</p>
 
-    <h2>9. Değişiklikler</h2>
-    <p>Bu politika zaman zaman güncellenebilir. Önemli değişiklikleri uygulama içinde veya bu
-    sayfada duyururuz.</p>
+    <h2>8. Haklarınız</h2>
+    <p>KVKK m.11 ve GDPR kapsamında; verilerinize erişme, düzeltme, silme, işlemeye itiraz
+    etme, taşınmasını isteme ve izinlerinizi geri çekme haklarına sahipsiniz. Talepleriniz
+    en geç 30 gün içinde yanıtlanır.</p>
 
-    <h2>10. İletişim</h2>
+    <h2>9. Hesap ve Veri Silme</h2>
+    <p>Hesabınızı uygulama içinden (Profil → Hesabı Sil) anında silebilirsiniz. Uygulamaya
+    erişiminiz yoksa <a href="hesap-silme.html">hesap silme sayfasındaki</a> talimatları
+    izleyin.</p>
+
+    <h2>10. Güvenlik</h2>
+    <p>Tüm veri iletimi TLS ile şifrelenir. Veritabanında satır düzeyi güvenlik (RLS)
+    uygulanır: her kullanıcı yalnızca kendi verisine erişebilir. Fotoğraflar erişimi kısıtlı
+    (private) depolama alanlarında tutulur.</p>
+
+    <h2>11. Çocukların Gizliliği</h2>
+    <p>Uygulama 13 yaş altı çocuklara yönelik değildir ve bilerek bu yaşın altından veri
+    toplamayız.</p>
+
+    <h2>12. Yapay Zeka ve Tıbbi Uyarı</h2>
+    <p>Cilt analizi, içerik değerlendirmeleri ve öneriler <strong>yalnızca bilgilendirme
+    amaçlıdır ve tıbbi teşhis/tedavi yerine geçmez.</strong> Ciddi cilt sorunlarında
+    dermatoloğa başvurun.</p>
+
+    <h2>13. Değişiklikler</h2>
+    <p>Bu politika güncellendiğinde "Son güncelleme" tarihi değiştirilir; önemli değişiklikler
+    uygulama içinde duyurulur.</p>
+
+    <h2>14. İletişim</h2>
     <div class="note">
       Gizlilikle ilgili sorular, erişim veya silme talepleri için:
       <strong><a href="mailto:ciltbakimipro@gmail.com">ciltbakimipro@gmail.com</a></strong>
     </div>
 
-    <footer>
-      © 2026 Cilt Bakımı Pro. Ürün verilerinin bir bölümü
-      <a href="https://world.openbeautyfacts.org">Open Beauty Facts</a> (ODbL) kaynağından alınmıştır.
-    </footer>
+    <footer>© 2026 Cilt Bakımı Pro</footer>
   </div>
 </body>
 </html>
