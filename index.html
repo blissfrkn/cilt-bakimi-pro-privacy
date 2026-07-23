@@ -32,7 +32,7 @@
   <div class="wrap">
     <header>
       <h1>Gizlilik Politikası — Cilt Bakımı Pro</h1>
-      <div class="date">Son güncelleme: 5 Temmuz 2026 · Sürüm 2.0</div>
+      <div class="date">Son güncelleme: 22 Temmuz 2026 · Sürüm 2.3</div>
     </header>
 
     <p>Bu Gizlilik Politikası, <strong>Cilt Bakımı Pro</strong> mobil uygulamasının ("Uygulama")
@@ -40,9 +40,11 @@
     haklarınızı açıklar. Uygulama, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve
     Avrupa Genel Veri Koruma Tüzüğü (GDPR) ilkeleri gözetilerek geliştirilmiştir.</p>
 
-    <div class="note"><strong>Özet:</strong> Verilerinizi satmayız ve kiralamayız; reklam ağı
-    veya üçüncü taraf takip/analitik SDK'sı kullanmayız. Verileriniz yalnızca uygulamanın
-    işlevlerini sunmak için işlenir.</div>
+    <div class="note"><strong>Özet:</strong> Verilerinizi satmayız ve kiralamayız. Premium
+    kullanıcılar reklamsızdır. Premium olmayan 18+ kullanıcılar yalnız açıkça seçtiklerinde,
+    sınırlı rutin erişimi için Google AdMob üzerinden kişiselleştirilmemiş ödüllü reklam
+    izleyebilir. Cilt profili, sağlık verisi, fotoğraf ve rutin içeriği reklam hedeflemesinde
+    kullanılmaz. Teknik çökme teşhisi için Firebase Crashlytics kullanırız.</div>
 
     <h2>1. Veri Sorumlusu</h2>
     <p>Uygulamanın geliştiricisi ve veri sorumlusu <strong>Cilt Bakımı Pro</strong> geliştirici
@@ -62,28 +64,43 @@
     <p><strong>Bildirim adresi:</strong> Anlık bildirim (push) jetonu ve bildirim tercihleri.</p>
     <p><strong>Yaklaşık konum:</strong> Yalnızca UV endeksi / hava kartı için ve yalnızca izin
     verirseniz; hesabınızla ilişkilendirilmez ve kaydedilmez.</p>
-    <p>Uygulama; rehberinizi, arama geçmişinizi, reklam kimliğinizi veya cihazınızdaki diğer
-    uygulamalara ait hiçbir veriyi toplamaz.</p>
+    <p><strong>Teknik tanılama:</strong> Uygulama sürümü, cihaz/işletim sistemi bilgisi ve
+    kişisel içerik eklenmeyen çökme/hata izleri.</p>
+    <p><strong>Ödüllü reklam ve erişim güvenliği:</strong> 18+ uygunluk beyanı, rastgele reklam
+    niyetinin yalnız özeti, reklam birimi, SSV işlem/zaman bilgisi, doğrulama sonucu ve verilen
+    rutin hakkı.</p>
+    <p>Uygulama; rehberinizi, arama geçmişinizi veya diğer uygulamaların içeriğini toplamaz.
+    Ödüllü reklamı seçtiğinizde Google Mobile Ads SDK; reklam sunumu, sahteciliği önleme ve
+    ölçüm için IP adresi, cihaz/uygulama tanımlayıcıları, reklam etkileşimi ve teknik
+    sinyaller işleyebilir. Android reklam kimliği, Topics ve Attribution izinleri uygulama
+    paketinde kapatılmıştır; SDK yine App Set ID gibi teknik kimlikleri işleyebilir. Uygulama
+    bunları cilt profilinizle reklam hedeflemesi için birleştirmez.</p>
 
     <h2>3. Fotoğraflarınız Nasıl İşlenir?</h2>
     <p><strong>Cilt analizi (ölçüm):</strong> Analiz fotoğrafınız <strong>cihazınızda</strong>
     işlenir; ölçüm için sunucuya yüklenmez ve saklanmaz. Hesabınıza yalnızca hesaplanan skorlar
     kaydedilir.</p>
     <p><strong>Görsel Değerlendirme (Premium):</strong> Bu özelliği kullandığınız anda,
-    fotoğrafınızın küçültülmüş bir kopyası (~512 piksel) değerlendirme metni üretilmesi için
-    yapay zeka altyapımıza <strong>şifreli bağlantıyla</strong> iletilir. Fotoğraf, yanıt
-    üretildikten sonra <strong>tarafımızca saklanmaz</strong>; hesabınıza yalnızca üretilen
-    metin kaydedilir.</p>
+    fotoğrafınız cihazda küçültülür, yeniden JPEG olarak kodlanıp EXIF/konum meta verilerinden
+    arındırılır ve yapay zeka değerlendirmesi için <strong>şifreli bağlantıyla</strong>,
+    hesabınıza özel geçici/private alana yüklenir. İş tamamlandığında veya reddedildiğinde
+    hemen; yarım kalan işlerde en geç <strong>1 saat</strong> içinde silinir. Hesabınıza
+    yalnız kalite bilgisi ve üretilen değerlendirme metni kaydedilir.</p>
     <p><strong>İlerleme fotoğrafları (Cilt Günlüğü):</strong> İsteğe bağlı çektiğiniz
     fotoğraflar hesabınıza özel (private) bulut depolama alanında saklanır; erişim yalnızca
     size aittir ve istediğiniz zaman silebilirsiniz.</p>
+    <p>Skorların nasıl üretildiği ve sınırları için
+    <a href="cilt-analizi-yontemi.html">Cilt Analizi Yöntem ve Sınırlar</a> sayfasını
+    inceleyebilirsiniz.</p>
 
     <h2>4. Verileri Hangi Amaçlarla Kullanıyoruz?</h2>
     <p>Hesabınızı yönetmek; kişiselleştirilmiş rutin ve ürün önerileri sunmak; cilt bakım
     takibinizi yürütmek; Cilt Koçu yanıtları ve içerik değerlendirmeleri üretmek; Premium
-    abonelik durumunu doğrulamak; izin verdiyseniz hatırlatma ve fiyat/fırsat bildirimleri
-    göndermek. <strong>Yasal dayanaklar (KVKK m.5 / GDPR m.6):</strong> sözleşmenin ifası,
-    açık rıza (fotoğraf, konum, bildirim) ve meşru menfaat (hizmet güvenliği).</p>
+    abonelik durumunu doğrulamak; açık seçiminizle ödüllü reklamı doğrulayıp sınırlı rutin
+    erişimi vermek; izin verdiyseniz hatırlatma ve fiyat/fırsat bildirimleri göndermek.
+    <strong>Yasal dayanaklar (KVKK m.5 / GDPR m.6):</strong> sözleşmenin ifası, açık rıza veya
+    açık kullanıcı seçimi (fotoğraf, konum, bildirim ve gerektiği bölgelerde reklam/cihaz
+    erişimi) ve meşru menfaat (hizmet güvenliği ve sahteciliği önleme).</p>
 
     <h2>5. Üçüncü Taraf Hizmet Sağlayıcılar</h2>
     <div class="tablewrap">
@@ -99,6 +116,13 @@
             <td>Satın alma tanımlayıcıları, abonelik durumu</td></tr>
         <tr><td><strong>Firebase Cloud Messaging</strong></td><td>Anlık bildirimler</td>
             <td>Bildirim jetonu</td></tr>
+        <tr><td><strong>Firebase Crashlytics</strong></td><td>Çökme ve teknik hata teşhisi</td>
+            <td>Uygulama/cihaz sürümü ve hata izi; fotoğraf, sohbet ve e-posta eklenmez</td></tr>
+        <tr><td><strong>Google AdMob / User Messaging Platform</strong></td>
+            <td>Açıkça seçilen kişiselleştirilmemiş ödüllü reklam, izin yönetimi ve SSV</td>
+            <td>IP, cihaz/uygulama tanımlayıcıları, etkileşim ve teknik sinyaller; Android reklam kimliği pakette kapalı, sağlık/fotoğraf/rutin içeriği yok</td></tr>
+        <tr><td><strong>Cloudflare</strong></td><td>API güvenliği, WAF ve DDoS koruması</td>
+            <td>İstek meta verisi ve geçici IP/güvenlik kayıtları</td></tr>
         <tr><td><strong>Open-Meteo</strong></td><td>UV endeksi / hava bilgisi</td>
             <td>Yaklaşık koordinat (kaydedilmez)</td></tr>
         <tr><td><strong>Open Beauty Facts</strong></td><td>Ürün/barkod sorgusu</td>
@@ -117,9 +141,10 @@
     uygulamanın diğer bölümlerini etkilemez.</p>
 
     <h2>7. Saklama Süreleri</h2>
-    <p>Verileriniz hesabınız aktif olduğu sürece saklanır. Hesabınızı sildiğinizde profil,
-    kayıt, fotoğraf ve sohbet verileriniz <strong>kalıcı olarak</strong> silinir; yedeklerdeki
-    kopyalar en geç 30 gün içinde temizlenir.</p>
+    <p>Hesap verileriniz hesabınız aktif olduğu sürece saklanır. Geçici analiz fotoğrafı en
+    fazla 1 saat, operasyon logları 30 gün, ödüllü reklam doğrulama ve güvenlik denetim kayıtları
+    en fazla 180 gün; rutin kullanım sayaçları 35 gün tutulur. Hesabınızı sildiğinizde profil, kayıt, fotoğraf ve sohbet verileriniz
+    <strong>kalıcı olarak</strong> silinir; yedeklerdeki kopyalar en geç 30 gün içinde temizlenir.</p>
 
     <h2>8. Haklarınız</h2>
     <p>KVKK m.11 ve GDPR kapsamında; verilerinize erişme, düzeltme, silme, işlemeye itiraz
@@ -141,9 +166,10 @@
     toplamayız.</p>
 
     <h2>12. Yapay Zeka ve Tıbbi Uyarı</h2>
-    <p>Cilt analizi, içerik değerlendirmeleri ve öneriler <strong>yalnızca bilgilendirme
-    amaçlıdır ve tıbbi teşhis/tedavi yerine geçmez.</strong> Ciddi cilt sorunlarında
-    dermatoloğa başvurun.</p>
+    <p><strong>Cilt Bakımı Pro tıbbi cihaz değildir; herhangi bir sağlık durumunu teşhis
+    etmez, tedavi etmez, iyileştirmez veya önlemez.</strong> Cilt analizi, içerik
+    değerlendirmeleri ve öneriler yalnızca bilgilendirme amaçlıdır. Sağlıkla ilgili
+    kararlar almadan önce bir doktora veya dermatoloğa başvurun.</p>
 
     <h2>13. Değişiklikler</h2>
     <p>Bu politika güncellendiğinde "Son güncelleme" tarihi değiştirilir; önemli değişiklikler

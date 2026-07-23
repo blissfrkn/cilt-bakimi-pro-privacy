@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cilt Analizi Yöntemi ve Sınırları — Cilt Bakımı Pro</title>
+  <style>
+    :root { --pink: #E8A0BF; --ink: #2b2330; --muted: #6b6470; --bg: #fffafc; --card: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.65; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+    header { border-bottom: 3px solid var(--pink); padding-bottom: 16px; }
+    h1 { font-size: 1.6rem; margin: 0 0 4px; }
+    h2 { font-size: 1.15rem; margin: 28px 0 8px; color: #8a4d6d; }
+    .date, footer { color: var(--muted); font-size: .9rem; }
+    .note { background: var(--card); border: 1px solid #eadfe5; border-left: 4px solid var(--pink); padding: 12px 16px; border-radius: 8px; margin: 18px 0; }
+    a { color: #b85c8a; }
+    footer { margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Cilt Analizi Yöntemi ve Sınırları</h1>
+      <div class="date">Son güncelleme: 22 Temmuz 2026 · skin-analysis-scores-v1 · vision-job-v3</div>
+    </header>
+
+    <div class="note"><strong>Cilt Bakımı Pro tıbbi cihaz değildir;</strong> herhangi bir
+    sağlık durumunu teşhis etmez, tedavi etmez, iyileştirmez veya önlemez. Sonuçlar kozmetik
+    görünüm takibine yardımcı olan yaklaşık göstergelerdir. Sağlıkla ilgili kararlar için
+    doktorunuza veya dermatoloğunuza başvurun.</div>
+
+    <h2>Amaç</h2>
+    <p>Fotoğraflı özellik, cilt görünümündeki değişiklikleri benzer çekim koşullarında takip
+    etmeyi kolaylaştırır. 0–100 skorları klinik doğruluk, hastalık olasılığı veya risk oranı
+    değildir.</p>
+
+    <h2>Cihazda hesaplanan skorlar</h2>
+    <ul>
+      <li><strong>Parlaklık görünümü:</strong> yüz bölgesindeki kabul edilen piksellerin
+      pozlamaya göre normalize edilmiş parlaklığı.</li>
+      <li><strong>Kızarıklık görünümü:</strong> gri-dünya beyaz dengelemesinden sonra kırmızı
+      kanalın yeşil/mavi kanal ortalamasına oranı.</li>
+      <li><strong>Ton eşitliği görünümü:</strong> parlaklık dağılımının varyasyon katsayısı.</li>
+      <li><strong>Genel görünüm:</strong> parlaklık %20, kızarıklık görünümü %40 ve ton
+      eşitliği görünümü %40 ağırlığıyla oluşturulur.</li>
+    </ul>
+    <p>Yöntem yüz tanıma, kimlik tespiti veya cilt rengi sınıflandırması yapmaz ve klinik bir
+    hastalık modeli değildir.</p>
+
+    <h2>Çekim kalite kapıları</h2>
+    <ul>
+      <li>Ortalama parlaklık 75–205 bandı dışındaysa çekim reddedilir.</li>
+      <li>Yeterli yüz/cilt pikseli bulunamazsa skor üretilmez.</li>
+      <li>Yüzün iki yarısındaki parlaklık farkı %30 üzerindeyse tek yönlü ışık kabul edilmez.</li>
+      <li>Yüzün kadrajda yeterli boyutta ve merkezde olması istenir.</li>
+    </ul>
+    <p>Kamera sensörü, otomatik beyaz dengesi, ortam ışığı, makyaj ve çekim açısı sonucu
+    değiştirebilir. Karşılaştırma için aynı cihaz, flaşsız yumuşak ışık ve benzer açı
+    kullanılmalıdır.</p>
+
+    <h2>Premium görsel değerlendirme ve fotoğraf yaşam döngüsü</h2>
+    <ol>
+      <li>Kullanıcı her analizden önce veri işleme açıklamasını kabul eder.</li>
+      <li>Fotoğraf küçültülür, yeniden JPEG kodlanır; EXIF ve konum meta verisi aktarılmaz.</li>
+      <li>Kopya TLS ile kullanıcıya özel geçici/private alana yüklenir ve yetkili Groq vision
+      modeli yalnız yapılandırılmış değerlendirme alanlarını üretir.</li>
+      <li>Fotoğraf iş tamamlanınca veya reddedilince hemen; yarım kalan işte en geç bir saat
+      içinde silinir.</li>
+      <li>Hesapta yalnız skorlar, kalite alanları, değerlendirme metni ve model/prompt/sözleşme
+      sürümü tutulur.</li>
+    </ol>
+    <p>Fotoğraf reklam hedeflemesi, yüz tanıma veya kimlik doğrulama amacıyla kullanılmaz.</p>
+
+    <h2>Güvenli kullanım</h2>
+    <p>Ürün talimatlarına uyun ve yeni ürünlerde yama testi yapın. Belirgin, devam eden veya
+    kötüleşen sorun ve reaksiyonda ürünü bırakın ve dermatoloğa başvurun. Yapay zeka çıktısı
+    uzman değerlendirmesinin yerine geçmez.</p>
+
+    <p><a href="index.html">Gizlilik Politikasına dön</a></p>
+    <footer>© 2026 Cilt Bakımı Pro</footer>
+  </main>
+</body>
+</html>
